@@ -1,0 +1,15 @@
+proc sgplot data=predicted_values;
+    vbar S4MAJMAINRSN / response=predicted_probability stat=mean group=X4RFDGMJSTEM;
+    xaxis label="Reason for Choosing Major";
+    yaxis label="Mean Predicted Probability of Enrolling in STEM";
+run;
+proc sgplot data=predicted_values;
+    vbar S2ANYAP / response=predicted_probability stat=mean group=X4RFDGMJSTEM;
+    xaxis label="Any AP Courses Taken";
+    yaxis label="Mean Predicted Probability of Enrolling in STEM";
+run;
+proc sgplot data=predicted_values;
+    vbar X1PAR2EDU / response=predicted_probability stat=mean group=X4RFDGMJSTEM;
+    xaxis label="Parent 2 Education Level";
+    yaxis label="Mean Predicted Probability of Enrolling in STEM";
+run;
